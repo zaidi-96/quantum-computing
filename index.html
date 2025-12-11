@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Quantum Revolution: Beyond Moore's Law</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to the separated CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Load required libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="text-gray-800">
+
+    <!-- Header / Hero -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold tracking-tight text-gray-900">Quantum<span class="text-[#4361EE]">Insights</span></h1>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
+                <a href="#intro" class="hover:text-[#F72585] transition">The Shift</a>
+                <a href="#power" class="hover:text-[#F72585] transition">Power</a>
+                <a href="#impact" class="hover:text-[#F72585] transition">Impact</a>
+                <a href="#challenges" class="hover:text-[#F72585] transition">Challenges</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-12">
+
+        <!-- Intro Section -->
+        <section id="intro" class="text-center py-10">
+            <span class="inline-block py-1 px-3 rounded-full bg-blue-100 text-[#4361EE] text-xs font-bold tracking-wide uppercase mb-4">Technology Trend Analysis</span>
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">The <span class="text-gradient">Quantum Revolution</span><br>Is Starting Now</h2>
+            <p class="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed">
+                For decades, we relied on Moore's Law, but classical silicon chips are hitting physical limits. 
+                We are entering a new era where we solve the world's hardest problems not by just computing <i>faster</i>, but by computing <i>differently</i>.
+            </p>
+        </section>
+
+        <!-- Comparison Section: Classical vs Quantum -->
+        <section id="power" class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div class="space-y-6 order-2 lg:order-1">
+                <div class="bg-white rounded-xl shadow-md p-8 hover-card border-l-4 border-[#4361EE]">
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Bits vs. Qubits: The Exponential Leap</h3>
+                    <p class="text-gray-600 mb-4">
+                        Classical computers use <strong>bits</strong> (0 or 1), processing tasks sequentially like a single flashlight scanning a room. 
+                        Quantum computers use <strong>qubits</strong>. Thanks to superposition, they can represent multiple states at once.
+                    </p>
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="flex flex-col items-center p-3 bg-gray-50 rounded-lg w-1/2">
+                            <span class="text-3xl font-bold text-gray-400">0 | 1</span>
+                            <span class="text-sm font-medium text-gray-500 mt-1">Classical Bit</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 bg-blue-50 rounded-lg w-1/2">
+                            <span class="text-3xl font-bold text-[#4361EE]">0 & 1</span>
+                            <span class="text-sm font-medium text-gray-500 mt-1">Qubit (Superposition)</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-500 italic">
+                        "If a classical computer is a single lane road, a quantum computer with 'N' qubits is a highway with 2^N lanes."
+                    </p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md p-6 order-1 lg:order-2">
+                <div class="mb-4">
+                    <h4 class="text-lg font-semibold text-gray-700">Computational Space Scaling</h4>
+                    <p class="text-xs text-gray-500">Comparing simultaneous states representable as units increase.</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="scalingChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Concept Breakdown: Entanglement & Superposition -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-xl shadow-md p-6 hover-card">
+                <div class="text-[#F72585] text-4xl mb-4">&#9883;</div>
+                <h3 class="text-xl font-bold mb-2">Superposition</h3>
+                <p class="text-gray-600 text-sm">
+                    A qubit isn't just a switch. It's a complex system that can exist in a probability state of both 0 and 1 simultaneously until measured.
+                </p>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white rounded-xl shadow-md p-6 hover-card">
+                <div class="text-[#7209B7] text-4xl mb-4">&#8734;</div>
+                <h3 class="text-xl font-bold mb-2">Entanglement</h3>
+                <p class="text-gray-600 text-sm">
+                    Linking qubits so they share a destiny. Changing the state of one instantly affects its partner, regardless of the distance between them.
+                </p>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white rounded-xl shadow-md p-6 hover-card">
+                <div class="text-[#4361EE] text-4xl mb-4">&#9889;</div>
+                <h3 class="text-xl font-bold mb-2">Parallelism</h3>
+                <p class="text-gray-600 text-sm">
+                    This allows the system to explore millions of potential solutions simultaneously, rather than checking them one by one.
+                </p>
+            </div>
+        </section>
+
+        <!-- Real World Impact Section -->
+        <section id="impact" class="bg-white rounded-2xl shadow-lg p-8 overflow-hidden relative">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-purple-100 rounded-bl-full -mr-8 -mt-8 z-0 opacity-50"></div>
+            
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-1 space-y-6">
+                    <h2 class="text-3xl font-bold text-gray-900">Real-World <span class="text-[#7209B7]">Breakthroughs</span></h2>
+                    <p class="text-gray-600">
+                        Quantum isn't just faster math; it's a key to unlocking nature's secrets. From designing new life-saving drugs to securing global data, the applications are transformative.
+                    </p>
+                    <ul class="space-y-4 mt-4">
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 h-6 w-6 rounded-full bg-[#4CC9F0] flex items-center justify-center text-white text-xs font-bold mr-3">1</span>
+                            <span class="text-sm text-gray-700"><strong>Cryptography:</strong> Cracking current encryption methods and creating unhackable quantum keys.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 h-6 w-6 rounded-full bg-[#4361EE] flex items-center justify-center text-white text-xs font-bold mr-3">2</span>
+                            <span class="text-sm text-gray-700"><strong>Chemistry:</strong> Simulating molecular interactions for drug discovery and new materials.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 h-6 w-6 rounded-full bg-[#F72585] flex items-center justify-center text-white text-xs font-bold mr-3">3</span>
+                            <span class="text-sm text-gray-700"><strong>Finance:</strong> Optimizing massive portfolios and modeling risk in seconds.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-2 flex flex-col justify-center items-center">
+                    <div class="w-full mb-2">
+                        <h4 class="text-center text-lg font-semibold text-gray-700">Sector Disruption Potential Index</h4>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="impactRadar"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenges Section -->
+        <section id="challenges" class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div class="bg-white rounded-xl shadow-md p-6 order-2 lg:order-1">
+                <div class="mb-4">
+                    <h4 class="text-lg font-semibold text-gray-700">The Temperature Gap</h4>
+                    <p class="text-xs text-gray-500">Operating temperatures (Kelvin) compared to nature.</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="tempChart"></canvas>
+                </div>
+            </div>
+
+            <div class="space-y-6 order-1 lg:order-2">
+                <div class="bg-gray-900 text-white rounded-xl shadow-md p-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-[#4CC9F0]"></div>
+                    <h3 class="text-2xl font-bold mb-3">The Environment Problem</h3>
+                    <p class="text-gray-300 mb-4">
+                        Qubits are incredibly sensitive (a "diva" of the particle world). They require near-perfect isolation to prevent <strong>decoherence</strong>—the loss of quantum state.
+                    </p>
+                    <p class="text-gray-300">
+                        To work, most quantum chips must be cooled to near <strong>absolute zero</strong>. This is colder than deep space, requiring massive, expensive "cryostats" (super-fridges).
+                    </p>
+                    <div class="mt-6 flex items-center space-x-2 text-[#4CC9F0]">
+                        <span class="text-2xl">&#10052;</span>
+                        <span class="font-bold text-lg">0.015 Kelvin Required</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / Footer -->
+        <section class="bg-gradient-to-r from-[#4361EE] to-[#7209B7] rounded-2xl shadow-xl p-10 text-center text-white mt-12 mb-12">
+            <h2 class="text-3xl font-bold mb-4">Stay Ahead of the Curve</h2>
+            <p class="text-lg text-blue-100 max-w-2xl mx-auto mb-8">
+                Quantum computing is still emerging, but understanding its trajectory is crucial. 
+                Don't let the future of technology leave you behind.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <button class="bg-white text-[#4361EE] font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition transform hover:scale-105">
+                    Follow for More Tech Breakdowns
+                </button>
+                <button id="exportBtn" class="bg-[#F72585] text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[#B5179E] transition transform hover:scale-105">
+                    Export as PNG
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Link to the separated JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
