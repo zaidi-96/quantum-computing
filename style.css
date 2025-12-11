@@ -1,0 +1,52 @@
+/* --- Global & Base Styles --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F3F4F6;
+}
+
+/* --- Layout Styles --- */
+.chart-container {
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 350px;
+    max-height: 400px;
+}
+
+@media (min-width: 768px) {
+    .chart-container {
+        height: 400px;
+        max-width: 100%;
+    }
+}
+
+/* --- Component Styles --- */
+.text-gradient {
+    background: linear-gradient(to right, #4361EE, #F72585);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* --- Scrollbar Aesthetics --- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #4361EE;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #3A0CA3;
+}
